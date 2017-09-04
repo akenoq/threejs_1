@@ -23,8 +23,8 @@
       <file leaf-file-name="scr1.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/script/scr1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+            <state relative-caret-position="101">
+              <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -248,12 +248,12 @@
       <option name="presentableId" value="Default" />
       <updated>1504479883520</updated>
       <workItem from="1504479886979" duration="861000" />
-      <workItem from="1504507403504" duration="1822000" />
+      <workItem from="1504507403504" duration="1961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2683000" />
+    <option name="totallyTimeSpent" value="2822000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,8 +300,8 @@
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/static/script/scr1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        <state relative-caret-position="101">
+          <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
           <folding />
         </state>
       </provider>
