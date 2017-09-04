@@ -45,6 +45,7 @@ window.onload = function() {
     // for rendering
     function loop() {
         // moving mesh
+        mesh.rotation.y += 1;
         mesh.position.x += 1;
 
         renderer.render(scene, camera);
