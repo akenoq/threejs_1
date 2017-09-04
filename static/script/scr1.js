@@ -11,7 +11,7 @@ window.onload = function() {
 
     // creating renderer and place for images
     let renderer = new THREE.WebGLRenderer({canvas: canvas});
-    renderer.setClearColor(0x003300);
+    renderer.setClearColor(0x003377);
 
     // creating scene
     let scene = new THREE.Scene();
@@ -23,7 +23,7 @@ window.onload = function() {
     camera.position.set(0, 0, 1000);
 
     // turn on light
-    let light = new THREE.AmbientLight(0xEEFFEE);
+    let light = new THREE.AmbientLight(0x00FF00);
 
     // add light to scene
     scene.add(light);
@@ -36,7 +36,13 @@ window.onload = function() {
     let geometry = new THREE.SphereGeometry(300, 12, 12);
 
     // material (color, borders)
-    let material = new THREE.MeshBasicMaterial({color: 0x00FF00, wireframe: true})
+    // we should open all color for material or only one color
+    let material = new THREE.MeshBasicMaterial({color: 0xFFFFFF, vertexColors: THREE.FaceColors});
+
+    for (let i = 0; i < geometry.faces.length; i++) {
+        //
+        geometry.faces[i].color.setRGB(Math.random(), Math.random(), Math.random());
+    }
 
     // mesh
     let mesh = new THREE.Mesh(geometry, material);
