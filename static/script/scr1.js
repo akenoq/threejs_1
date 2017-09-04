@@ -1,5 +1,37 @@
 "use strict";
 
+class ball {
+    constructor() {
+        this.rotation = 0;
+    }
+
+    setRotation(n) {
+        this.rotation = n;
+        console.log(this.returnRotation());
+    }
+
+    returnRotation() {
+        return this.rotation;
+    }
+}
+
+class ElemByClassName {
+    takeElement(s) {
+        s = s.toString();
+
+        let elArr = document.getElementsByClassName(s);
+        let myEl = elArr[0];
+
+        console.log()
+
+        return myEl;
+    }
+}
+
+class MainClass {
+
+}
+
 window.onload = function() {
     // size of canvas = size of window
     let width = window.innerWidth;
@@ -28,10 +60,6 @@ window.onload = function() {
     // add light to scene
     scene.add(light);
 
-    // geometry
-    // plane (w, h, number of pieces)
-    // let geometry = new THREE.PlaneGeometry(300, 300, 12, 12);
-
     // sphere (r, number of pieces)
     let geometry = new THREE.SphereGeometry(300, 12, 12);
 
@@ -40,7 +68,6 @@ window.onload = function() {
     let material = new THREE.MeshBasicMaterial({color: 0xFFFFFF, vertexColors: THREE.FaceColors});
 
     for (let i = 0; i < geometry.faces.length; i++) {
-        //
         geometry.faces[i].color.setRGB(Math.random(), Math.random(), Math.random());
     }
 
@@ -48,11 +75,18 @@ window.onload = function() {
     let mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
+    let ballObj = new ball();
+    let rot = new ElemByClassName().takeElement("main-box__range-element");
+
     // for rendering
     function loop() {
         // moving mesh
-        mesh.rotation.y += Math.PI / 500;
-        mesh.position.x += 1;
+        // mesh.rotation.y += Math.PI / 500;
+
+        // регулировка скоростью вращения через класс ball
+         console.log("rot = " + rot);
+        ballObj.setRotation(rot.value / 1000);
+        mesh.rotation.y += ballObj.returnRotation();
 
         renderer.render(scene, camera);
 
