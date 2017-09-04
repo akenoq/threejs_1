@@ -84,7 +84,7 @@ window.onload = function() {
         // mesh.rotation.y += Math.PI / 500;
 
         // регулировка скоростью вращения через класс ball
-         console.log("rot = " + rot);
+        console.log("rot = " + rot);
         ballObj.setRotation(rot.value / 1000);
         mesh.rotation.y += ballObj.returnRotation();
 
